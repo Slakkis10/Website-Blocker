@@ -1,0 +1,8 @@
+#This file contains a list of websites to have blocked when executing 'WebisteBlocker.py'
+#Insert individual websites on their own separate lines
+#	For Example:
+#	"facebook.com"
+#	"instagram.com"
+
+"www.youtube.com"
+"youtube.com"
