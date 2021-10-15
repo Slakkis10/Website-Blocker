@@ -13,6 +13,9 @@ have blocked during specific times of the day
 blockedWebsites = []
 websiteIdx = []
 
+# User Input
+start_hour = 9
+end_hour = 22
 hostLoc = r"C:\Windows\System32\drivers\etc\hosts" #Location of host file
 redirect = "127.0.0.1" #IP redirect address
 
@@ -98,7 +101,7 @@ if is_admin():
             blockedWebsites = [lines[ii] for ii in websiteIdx]
             
             # Execute Wesbite-Blocker Logic
-            BlockWebsites(9, 22, blockedWebsites)
+            BlockWebsites(start_hour, end_hour, blockedWebsites)
 else:
     # Re-run the program with admin rights
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
